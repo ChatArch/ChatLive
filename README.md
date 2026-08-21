@@ -26,22 +26,26 @@ pip install ChatLive
 chatlive --help
 chatlive --version
 chatlive --tree
+chatlive --tree-brief
 ```
 
 ## 当前 CLI 树
 
+以下为 `chatlive --tree-brief` 的注册命令面。`chatlive --tree` 通常额外显示参数签名；当前 root-only CLI 没有业务命令参数，因此两个视图相同。
+
 ```text
-chatlive  # ChatArch live tooling entrypoint
-├── --help  # show command help
-├── --version  # show the installed package version
-└── --tree  # show this CLI tree
+chatlive
+├── --help  # Show this message and exit.
+├── --version  # Show the version and exit.
+├── --tree  # Print the registered CLI tree and exit.
+└── --tree-brief  # Print the registered CLI tree without parameter signatures and exit.
 ```
 
 ## CLI 边界
 
 - 当前 CLI 只有根选项，没有业务子命令。
-- `--tree` 从实际 Click 命令注册面生成，用来校对 README、文档和测试。
-- 后续新增真实 live tooling 命令时，必须先更新 Click 注册面，再用真实 `chatlive --tree` 同步文档。
+- `--tree` 和 `--tree-brief` 由 ChatStyle 从实际 Click 命令注册面生成，用来校对 README、文档和测试。
+- 后续新增真实 live tooling 命令时，必须先更新 Click 注册面，再用真实 `chatlive --tree` 与 `chatlive --tree-brief` 同步文档。
 
 ## 目录结构
 

@@ -20,6 +20,13 @@ ChatLive is the ChatArch live tooling package entrypoint. These docs record the 
 
 </div>
 
+## CLI Inspection
+
+```bash
+chatlive --tree
+chatlive --tree-brief
+```
+
 ## Local Preview
 
 ```bash

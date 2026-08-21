@@ -20,6 +20,13 @@ ChatLive 是 ChatArch 的 live tooling 包入口。当前文档记录已实现 C
 
 </div>
 
+## CLI 检查
+
+```bash
+chatlive --tree
+chatlive --tree-brief
+```
+
 ## 本地预览
 
 ```bash
